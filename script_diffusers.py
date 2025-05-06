@@ -14,7 +14,7 @@ model_path = "runwayml/stable-diffusion-inpainting"
 pipe = StableDiffusionInpaintPipeline.from_pretrained(
     model_path,
     torch_dtype=torch.float16,
-    cache_dir="models"
+    cache_dir="models", safety_checker=None
 ).to(device)
 
 import requests
